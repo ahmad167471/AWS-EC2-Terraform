@@ -1,4 +1,4 @@
-<img width="1208" height="565" alt="Screenshot 2026-02-03 162817" src="https://github.com/user-attachments/assets/86775679-93cf-4def-82cf-3eb798587dea" /><img width="1208" height="565" alt="Screenshot 2026-02-03 162817" src="https://github.com/user-attachments/assets/801fc629-4044-47db-a1bb-cae0c51c63d8" /># AWS-EC2-Terraform
+# AWS-EC2-Terraform
 Hands-on AWS EC2 deployment using AWS Console and Terraform (Infrastructure as Code).
 
 
