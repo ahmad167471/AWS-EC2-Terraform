@@ -1,4 +1,4 @@
-# AWS-EC2-Terraform
+<img width="1208" height="565" alt="Screenshot 2026-02-03 162817" src="https://github.com/user-attachments/assets/86775679-93cf-4def-82cf-3eb798587dea" /><img width="1208" height="565" alt="Screenshot 2026-02-03 162817" src="https://github.com/user-attachments/assets/801fc629-4044-47db-a1bb-cae0c51c63d8" /># AWS-EC2-Terraform
 Hands-on AWS EC2 deployment using AWS Console and Terraform (Infrastructure as Code).
 
 
@@ -34,7 +34,7 @@ From the AWS Console Home, the **EC2 service** was selected to launch a virtual 
 ## Launching an EC2 Instance
 Click **Launch instance** to begin EC2 creation.
 
-![Launch EC2](../images/launch-instance.png)
+[Launch EC2]<img width="574" height="230" alt="Screenshot 2026-02-03 165355" src="https://github.com/user-attachments/assets/fd08b221-b8c2-439e-952d-059bcd43909b" />
 
 ---
 
@@ -60,7 +60,8 @@ Details:
 - 1 vCPU
 - 1 GB RAM
 
-![Instance Type](../images/instance-type.png)
+[Instance Type]<img width="1208" height="565" alt="Screenshot 2026-02-03 162817" src="https://github.com/user-attachments/assets/f8769797-6f31-493a-a4bb-dd9f27eb34d6" />
+
 
 ---
 
@@ -77,7 +78,8 @@ Before launching, AWS shows a summary of:
 - Storage
 - Security group
 
-![Launch Summary](../images/launch-summary.png)
+[Launch Summary]<img width="651" height="763" alt="Screenshot 2026-02-03 162907" src="https://github.com/user-attachments/assets/6db79cf2-1c0c-4015-9e0e-c72d5abd6967" />
+
 
 ---
 
