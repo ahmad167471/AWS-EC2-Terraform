@@ -13,8 +13,8 @@ All steps are performed using **AWS Free Tier eligible resources** in the **Asia
 ## AWS Console Home
 The AWS Management Console provides access to all AWS services.
 
-![AWS Console Home](<img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/e2409486-5367-4de0-8448-31d351e23fcd" />
-)
+![AWS Console Home]<img width="1919" height="908" alt="Screenshot 2026-02-03 152349" src="https://github.com/user-attachments/assets/793b7e66-b699-4aec-b3da-3247c1eae63b" />
+
 
 Key services used:
 - EC2
