@@ -148,3 +148,88 @@ provider "aws" {
   region = "ap-south-1"
 }
 
+EC2 Resource Definition
+resource "aws_instance" "ec2_instance" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  key_name      = var.key_name
+
+
+  tags = {
+    Name = "Terraform-EC2"
+  }
+}
+Variables Used
+variable "ami_id" {
+  description = "AMI ID for EC2"
+}
+
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  default     = "t2.micro"
+}
+
+
+variable "key_name" {
+  description = "EC2 key pair name"
+}
+Output Values
+output "ec2_public_ip" {
+  value = aws_instance.ec2_instance.public_ip
+}
+Terraform Workflow
+Initialize Terraform
+terraform init
+Apply Configuration
+terraform apply
+
+After execution:
+
+EC2 instance is created
+
+Public IP address is displayed
+
+Instance is visible in AWS Console
+
+Destroy Infrastructure
+terraform destroy
+
+All Terraform-managed resources were destroyed to ensure cost control.
+
+Verification
+
+EC2 instance successfully created manually and via Terraform
+
+Instance visible in AWS Console
+
+Public IP assigned correctly
+
+Resources cleaned up after validation
+
+Key Learnings
+
+Manual provisioning helps understand AWS fundamentals
+
+Terraform enables automation and repeatability
+
+Infrastructure as Code is essential for modern DevOps
+
+AMI IDs are region-specific
+
+Resource cleanup is critical for AWS Free Tier usage
+
+Free Tier & Cost Management
+
+All resources were created using AWS Free Tier eligible services.
+Instances were terminated manually and via terraform destroy to avoid unnecessary billing.
+
+Conclusion
+
+This project provided practical exposure to real-world DevOps workflows.
+By combining manual provisioning with Infrastructure as Code, I gained confidence in managing, automating, and maintaining cloud infrastructure efficiently.
+
+Author
+
+Ahmad Amin
+
