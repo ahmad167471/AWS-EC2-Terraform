@@ -140,55 +140,11 @@ Terraform enables automated, repeatable, and version-controlled infrastructure p
 
 ---
 
-## Terraform Project Structure
-terraform_ec2/
-├── provider.tf
-├── main.tf
-├── variables.tf
-└── outputs.tf
-
-
----
-
-## Provider Configuration
+### Provider Configuration
 Terraform is configured to use AWS as the cloud provider.
-## Code
+
+```hcl
 provider "aws" {
   region = "ap-south-1"
 }
-
-
-##  EC2 Resource Definition
-
-The EC2 instance is defined declaratively using Terraform.
-
-resource "aws_instance" "ec2_instance" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  key_name      = var.key_name
-
-  tags = {
-    Name = "Terraform-EC2"
-  }
-}
-
----
-
-## Variables Used
-
-Input variables improve flexibility and reusability.
-
-variable "ami_id" {
-  description = "AMI ID for EC2"
-}
-
-variable "instance_type" {
-  description = "EC2 instance type"
-  default     = "t2.micro"
-}
-
-variable "key_name" {
-  description = "EC2 key pair name"
-}
-
 
