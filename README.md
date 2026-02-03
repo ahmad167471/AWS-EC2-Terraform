@@ -147,8 +147,10 @@ Terraform is configured to use AWS as the cloud provider.
 provider "aws" {
   region = "ap-south-1"
 }
-
-EC2 Resource Definition
+```
+---
+## EC2 Resource Definition
+```hcl
 resource "aws_instance" "ec2_instance" {
   ami           = var.ami_id
   instance_type = var.instance_type
@@ -159,11 +161,12 @@ resource "aws_instance" "ec2_instance" {
     Name = "Terraform-EC2"
   }
 }
-Variables Used
+```
+### Variables Used
+```hcl
 variable "ami_id" {
   description = "AMI ID for EC2"
 }
-
 
 variable "instance_type" {
   description = "EC2 instance type"
@@ -174,17 +177,25 @@ variable "instance_type" {
 variable "key_name" {
   description = "EC2 key pair name"
 }
-Output Values
+```
+## Output Values
+
+```hcl
 output "ec2_public_ip" {
   value = aws_instance.ec2_instance.public_ip
 }
-Terraform Workflow
+```
+## Terraform Workflow
 Initialize Terraform
+```hcl
 terraform init
-Apply Configuration
+```
+### Apply Configuration
+```hcl
 terraform apply
+```
 
-After execution:
+## After execution:
 
 EC2 instance is created
 
@@ -192,12 +203,13 @@ Public IP address is displayed
 
 Instance is visible in AWS Console
 
-Destroy Infrastructure
+## Destroy Infrastructure
+```hcl
 terraform destroy
-
+```
 All Terraform-managed resources were destroyed to ensure cost control.
 
-Verification
+## Verification
 
 EC2 instance successfully created manually and via Terraform
 
@@ -207,7 +219,7 @@ Public IP assigned correctly
 
 Resources cleaned up after validation
 
-Key Learnings
+## Key Learnings
 
 Manual provisioning helps understand AWS fundamentals
 
@@ -219,12 +231,12 @@ AMI IDs are region-specific
 
 Resource cleanup is critical for AWS Free Tier usage
 
-Free Tier & Cost Management
+## Free Tier & Cost Management
 
 All resources were created using AWS Free Tier eligible services.
 Instances were terminated manually and via terraform destroy to avoid unnecessary billing.
 
-Conclusion
+## Conclusion
 
 This project provided practical exposure to real-world DevOps workflows.
 By combining manual provisioning with Infrastructure as Code, I gained confidence in managing, automating, and maintaining cloud infrastructure efficiently.
@@ -232,4 +244,3 @@ By combining manual provisioning with Infrastructure as Code, I gained confidenc
 Author
 
 Ahmad Amin
-
