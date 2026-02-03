@@ -2,7 +2,7 @@
 Hands-on AWS EC2 deployment using AWS Console and Terraform (Infrastructure as Code).
 
 
-# AWS EC2 – Manual Instance Launch (AWS Console)
+# PART-1  AWS EC2 – Manual Instance Launch (AWS Console)
 
 ## Overview
 This document explains the **manual creation of an EC2 instance** using the **AWS Management Console**.  
@@ -34,7 +34,8 @@ From the AWS Console Home, the **EC2 service** was selected to launch a virtual 
 ## Launching an EC2 Instance
 Click **Launch instance** to begin EC2 creation.
 
-[Launch EC2]<img width="574" height="230" alt="Screenshot 2026-02-03 165355" src="https://github.com/user-attachments/assets/fd08b221-b8c2-439e-952d-059bcd43909b" />
+[Launch EC2]
+<img width="574" height="230" alt="Screenshot 2026-02-03 165355" src="https://github.com/user-attachments/assets/fd08b221-b8c2-439e-952d-059bcd43909b" />
 
 ---
 
@@ -78,7 +79,8 @@ Before launching, AWS shows a summary of:
 - Storage
 - Security group
 
-[Launch Summary]<img width="651" height="763" alt="Screenshot 2026-02-03 162907" src="https://github.com/user-attachments/assets/6db79cf2-1c0c-4015-9e0e-c72d5abd6967" />
+[Launch Summary]
+<img width="651" height="763" alt="Screenshot 2026-02-03 162907" src="https://github.com/user-attachments/assets/6db79cf2-1c0c-4015-9e0e-c72d5abd6967" />
 
 
 ---
@@ -120,3 +122,73 @@ Manual EC2 provisioning helps in understanding:
 - Networking basics
 - Security groups
 - Cost management
+
+# PART-2  AWS EC2 – Terraform Instance Launch
+
+## Overview
+This part of the task focuses on launching an **AWS EC2 instance using Terraform**, following the **Infrastructure as Code (IaC)** approach.  
+Terraform enables automated, repeatable, and version-controlled infrastructure provisioning, which is a core DevOps practice.
+
+---
+
+## Why Terraform?
+- Eliminates manual configuration errors
+- Enables infrastructure automation
+- Supports version control using Git
+- Ensures consistency across environments
+- Simplifies resource creation and destruction
+
+---
+
+## Terraform Project Structure
+terraform_ec2/
+├── provider.tf
+├── main.tf
+├── variables.tf
+└── outputs.tf
+
+
+---
+
+## Provider Configuration
+Terraform is configured to use AWS as the cloud provider.
+## Code
+provider "aws" {
+  region = "ap-south-1"
+}
+
+
+##  EC2 Resource Definition
+
+The EC2 instance is defined declaratively using Terraform.
+
+resource "aws_instance" "ec2_instance" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  key_name      = var.key_name
+
+  tags = {
+    Name = "Terraform-EC2"
+  }
+}
+
+---
+
+## Variables Used
+
+Input variables improve flexibility and reusability.
+
+variable "ami_id" {
+  description = "AMI ID for EC2"
+}
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  default     = "t2.micro"
+}
+
+variable "key_name" {
+  description = "EC2 key pair name"
+}
+
+
