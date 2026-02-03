@@ -13,7 +13,8 @@ All steps are performed using **AWS Free Tier eligible resources** in the **Asia
 ## AWS Console Home
 The AWS Management Console provides access to all AWS services.
 
-![AWS Console Home](../images/aws-console-home.png)
+![AWS Console Home](<img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/e2409486-5367-4de0-8448-31d351e23fcd" />
+)
 
 Key services used:
 - EC2
@@ -26,7 +27,8 @@ Key services used:
 ## Navigating to EC2 Service
 From the AWS Console Home, the **EC2 service** was selected to launch a virtual server.
 
-![EC2 Dashboard](../images/ec2-dashboard.png)
+![EC2 Dashboard](<img width="1919" height="842" alt="image" src="https://github.com/user-attachments/assets/4568f70a-c0f6-45f1-b000-1e24854abf91" />
+)
 
 ---
 
@@ -43,7 +45,8 @@ Click **Launch instance** to begin EC2 creation.
 - Free Tier eligible
 - Secure and stable
 
-![AMI Selection](../images/ami-selection.png)
+![AMI Selection](<img width="1919" height="807" alt="image" src="https://github.com/user-attachments/assets/12b0e158-4ac9-443c-95e7-2551b5c9e3d5" />
+)
 
 Details:
 - Architecture: 64-bit (x86)
@@ -83,7 +86,8 @@ Before launching, AWS shows a summary of:
 ## EC2 Instance Running
 After launch, the EC2 instance entered the **Running** state.
 
-![Running Instance](../images/running-instance.png)
+![Running Instance](<img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/9be2ca1b-e3c8-4381-bd1d-031660a29998" />
+)
 
 ---
 
@@ -94,7 +98,8 @@ The instance details page shows:
 - Private IP
 - Availability Zone
 
-![Instance Details](../images/instance-details.png)
+![Instance Details](<img width="1918" height="912" alt="image" src="https://github.com/user-attachments/assets/db62e6bc-a0c2-46b5-907a-4ea689ded1b6" />
+)
 
 ---
 
